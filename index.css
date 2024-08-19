@@ -33,15 +33,16 @@ header {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1000;
 }
 
-ul {
+.hearder-navs ul {
     display: flex;
     list-style: none;
     gap: 40px;
 }
 
-ul li a {
+.hearder-navs ul li a {
     text-decoration: none;
     color: var(--grayish-blue);
     font-weight: 300;
@@ -49,11 +50,11 @@ ul li a {
     position: relative;
 }
 
-ul li a:hover {
+.hearder-navs ul li a:hover {
     color: var(--dark-blue);
 }
 
-ul li a:hover::after {
+.hearder-navs ul li a:hover::after {
     content: "";
     position: absolute;
     left: 0;
@@ -168,6 +169,8 @@ p {
 }
 
 .a-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     /* gap: 20px; */
     justify-content: space-between;
     border-radius: 10px;
@@ -176,13 +179,13 @@ p {
 }
 
 .a-card:hover {
-
-    transition: 0.2s ease;
+    transform: scale(1.01);
+    transition: 0.8s ease;
 }
 
 .a-card img {
     width: 100%;
-    height: 300px;
+    height: 200px;
     border-radius: 10px 10px 0 0;
 }
 
@@ -237,6 +240,7 @@ footer img {
 }
 
 .footer-navs ul {
+    list-style: none;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px 40px;
@@ -244,6 +248,7 @@ footer img {
 
 .footer-navs ul li a {
     color: var(--white);
+    text-decoration: none;
 }
 
 .footer-navs ul li a:hover {
