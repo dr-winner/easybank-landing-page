@@ -13,6 +13,7 @@
 }
 
 body {    
+    width: 100%;
     font-family: 'public sans';
     margin: 0;
     padding: 0;
@@ -22,9 +23,10 @@ body {
 }
 
 header {
+    font-family: 'public sans';
     display: flex;
     justify-content: space-between;
-    padding: 0 8%;
+    padding: 0 10%;
     margin: 0;
     align-items: center;
     background-color: var(--white);
@@ -32,10 +34,6 @@ header {
     top: 0;
     left: 0;
     right: 0;
-}
-
-
-nav{
 }
 
 ul{
@@ -52,6 +50,10 @@ ul li a{
     position: relative;
 }
 
+ul li a:hover{
+    color: var(--dark-blue);
+}
+
 ul li a:hover::after {
     content: "";
     position: absolute;
@@ -59,6 +61,7 @@ ul li a:hover::after {
     right: 0;
     bottom: 0;
     height: 4px;
+    color: var(--dark-blue);
     background: linear-gradient(45deg, var(--lime-green), var(--bright-cyan));
 }
 
@@ -67,16 +70,16 @@ button{
     background-image: linear-gradient(45deg, var(--lime-green), var(--bright-cyan));
     color: var(--white);
     border: none;
-    padding: 10px 20px;
+    padding: 10px 30px;
     border-radius: 40px;
     font-weight: 700;
     box-shadow: 0 5px 10px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.5s ease;
 }
 
 button:hover{
     cursor: pointer;
-    background-color: rgba(255, 254, 254, 0.269);
+    background-image: linear-gradient(45deg, var(--bright-cyan), var(--lime-green));
 }
 
 
@@ -89,41 +92,42 @@ button:hover{
 
 .hero-image-holder{
     background-image: url("./images/bg-intro-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
 }
 
 .hero-image-holder img{
-    /* width: 100%; */
+    /* width: 100%;  */
     /* padding-right: -100px; */
 }
 
-.hero{
-    padding: 0 0 0 150px;
-}
-
 .hero-text{
+    font-family: 'public sans';
     text-decoration: none;
-    padding-left: 150px;
+    padding-left: 10%;
     align-content: center;
+    width: 30%;
 }
 
-.hero-text h1, .next-sec-text h1{
-    font-size: 50px;
-    font-weight: 700;
+.hero-text h1{
+    font-size: 60px;
+    font-weight: 500;
     color: var(--dark-blue);
-
-
 }
 
 p{
-    font-size: 20px;
+    font-size: 22px;
     color: var(--grayish-blue);
     font-weight: 300;
-    margin-bottom: 20px;
+    margin: 40px 0;
 }
 
 /* next section */
 .next-sec{
-    padding: 0 150px 200px;
+    font-family: 'public sans';
+    padding: 40px 150px 50px;
+    background-color: var(--light-grayish-blue);
 }
 
 .cards{
@@ -133,13 +137,63 @@ p{
     margin-top: 100px;
     gap: 20px;
 }
+.next-sec-text h2, .article-section h2{
+    font-size: 50px;
+    color: var(--dark-blue);
+    font-weight: 500;
+}
 
 .card h3{
-    font-size: 500;
+    font-size: 25px;
     color: var(--dark-blue);
     font-weight: 300;
 }
 
-.card{
+/* Article section */
+
+.article-section{
+    padding: 100px 150px;
+    background-color: var(--very-light-gray);
+}
+.article-cards{
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    margin-top: 100px;
+    gap: 25px;
+}
+.a-card{
+    /* gap: 20px; */
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: var(--white);
+
+}
+
+.a-card img{
+    width: 100%;
+    height: 300px;
+    border-radius: 10px 10px 0 0;
+}
+
+.a-card p{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--grayish-blue);
+    padding: 20px 25px;
+}
+
+.a-card h4{
+    margin: 0;
+    font-size: 20px;
+    color: var(--dark-blue);
+    font-weight: 400;
+    padding: 25px;
+}
+
+.a-card h4:hover{
+    color: var(--lime-green);
+    cursor: pointer;
+    transition: 0.2s ease;
 }
